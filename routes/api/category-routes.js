@@ -1,10 +1,10 @@
 const router = require("express").Router();
-const { Category, Product } = require("../../models");
+const { Category, Product, Tag } = require("../../models");
 
 //******** */ The `/api/categories` endpoint **************
 
+// find all categories
 router.get("/", async (req, res) => {
-  // find all categories
   // be sure to include its associated Products
   try {
     const categoryData = await Category.findAll({
@@ -62,7 +62,7 @@ router.put("/:id", async (req, res) => {
 router.delete("/:id", async (req, res) => {
   // delete a category by its `id` value
   try {
-    const deletedCategory = Book.destroy({
+    const deletedCategory = await Category.destroy({
       where: {
         id: req.params.id,
       }
