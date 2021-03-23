@@ -6,6 +6,8 @@ Users should be able to: GET all products, categories, and tags. GET a particula
 
 ## Testing this Application 
 
+NOTE: if you have forked this repository, make sure to run the command 'npm install' to install the dependencies required to run this program before using. The dependencies are listed in the 'package.json' file located in the root of the repository. 
+
 Before testing, ensure that the 'ecommerce_db' is created at the first step. If you have the MySQL extension in vscode you can simply right-click on the 'schema.sql' file and select 'Run MYSQL Query'. A message in your terminal "Finished MYSQL query" should appear in the console after the database has been successfully created. 
 
 ![MYSQL query vscode](/Assets/sqlvscode.gif)
